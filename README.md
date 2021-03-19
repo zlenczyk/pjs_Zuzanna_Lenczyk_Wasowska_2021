@@ -61,5 +61,6 @@ Możliwość utworzenia konta, dzięki czemu użytkownik w łatwy sposób może 
 - 28.05 - kompletny panel logowania bez możliwości oznaczeń postów
 - 04.06 - możliwość oznaczania postów i zakładka z ich podziałem - KONIEC PROJEKTU
 
+![wizualizacja_projektu](https://user-images.githubusercontent.com/44050412/111718027-892fa500-8859-11eb-9c50-4bc0211e4dfc.png)
 
 
