@@ -54,6 +54,7 @@ Możliwość utworzenia konta, dzięki czemu użytkownik w łatwy sposób może 
 
 - 26.03 - zaznajomienie się z używanymi technologiami
 - 2.04 - stworzenie zakładki kontakt oraz z opisem prowadzącego bloga
+- AKTUALIZACJA - 09.04 - stworzenie zakładki kontakt oraz z opisem prowadzącego bloga
 - 9.04 - stworzenie zakładki ze zdjęciami nadesłanymi przez użytkowników
 - 16.04 - wstępne zakładki o uprawie i designie - bez możliwości wyszukania.
 - 30.04 - możliwość wyszukania posta po nazwie
