@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block title %}Tworzenie nowego posta{% endblock %}
+
+{% block content %}
+
+
+
+
+<h1>Dodaj nowy post</h1>
+<br/><br/>
+
+<div class="form-group">
+	<form method="POST" enctype="multipart/form-data">
+		{% csrf_token %}
+		{{ form.media }}
+		{{ form.as_p }}
+		<button class="btn btn_secondary">Dodaj</button>
+</div>
+
+{% endblock %}

@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+{% if cat_posts %}
+
+
+{{ cats }}
+
+
+<ul>
+{% for post in cat_posts %}
+	<li><a href="{% url 'post-detail' post.pk %}">{{ post.title }}</a>
+	- {{ post.author.first_name }}
+	{{ post.author.last_name }} - {{ post.post_date }} - <a href="{% url 'update_post' post.pk %}">Edytuj</a> - <a href="{% url 'delete_post' post.pk %}">Usuń</a><br/>
+	{{ post.body|safe }}</li>
+{% endfor %}
+</ul>
+
+{% else %}
+	<h2>Przepraszamy, ta strona nie istnieje.</h2>
+{% endif %}
+
+{% endblock %}
