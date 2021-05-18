@@ -1,0 +1,9 @@
+Aktualizacja 19.05:
+
+
+1. dodana możliwość logowania, wylogowania oraz rejestracji
+2. wstępna autoryzacja: dopiero po zalogowaniu można dodać/edytować/usuwać posty
+3. na dole strony dodana paginacja - na stronie pojawia się określona stała liczba postów, po przekroczeniu tej liczby, kolejny posty są wyświetlane na kolejnych stronach
+4. poprawiona zakładka kontakt - lepszy wygląd + użytkownik może wypełnić formularz i wysłać maila do prowadzącego bloga
+5. dodana możliwość wyszukiwania posta po nazwie
+6. dodane tagi - na razie nie są grupowe, działają na takiej samej zasadzie jak kategorie
