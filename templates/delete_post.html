@@ -4,7 +4,7 @@
 {% block content %}
 
 
-
+{% if user.is_authenticated %}
 
 <h1>Usuń post</h1>
 <br/><br/>
@@ -18,5 +18,11 @@
 	    </br>
 		<button class="btn btn_secondary">Usuń</button>
 </div>
+
+{% else %}
+
+Przepraszamy, nie można wyświetlić tej strony
+
+{% endif %}
 
 {% endblock %}

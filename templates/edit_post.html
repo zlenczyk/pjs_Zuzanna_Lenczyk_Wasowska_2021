@@ -4,7 +4,7 @@
 {% block content %}
 
 
-
+{% if user.is_authenticated %}
 
 <h1>Zaktualizuj post</h1>
 <br/><br/>
@@ -16,5 +16,11 @@
 		{{ form.as_p }}
 		<button class="btn btn_secondary">Aktualizuj</button>
 </div>
+
+{% else %}
+
+Przepraszamy, nie można wyświetlić tej strony.
+
+{% endif %}
 
 {% endblock %}

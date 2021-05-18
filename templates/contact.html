@@ -1,5 +1,7 @@
 {% extends 'base.html' %}
 
+{% load static %}
+
 {% block content %}
 
 <!DOCTYPE html>
@@ -27,7 +29,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 <div class="w3-main w3-padding-large" style="margin-left:0%">
 
   <!-- Contact Section -->
-  <div class="w3-padding-32 w3-content w3-text-grey" id="contact" style="margin-bottom:64px">
+  <!-- <div class="w3-padding-32 w3-content w3-text-grey" id="contact" style="margin-bottom:64px">
     <h2>Skontaktuj się ze mną</h2>
     <hr class="w3-opacity">
 
@@ -37,26 +39,70 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
       <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: zuzia.lenczyk@gmail.com</p>
     </div>
     
-    <!-- Image of location/map -->
     <img src="/media/images/Wroclaw.jpg" class="w3-image w3-greyscale" style="width:100%;margin:32px 0">
    
-    <!-- <p>Wyślij mi wiadomość:</p>
+    <p>Wyślij mi wiadomość:</p>
     <form action="/action_page.php" target="_blank">
-      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Name" required name="Name"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Imię" required name="Name"></p>
       <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Email" required name="Email"></p>
-      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Subject" required name="Subject"></p>
-      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Message" required name="Message"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Treść wiadomości" required name="Message"></p>
       <p>
         <button class="w3-button w3-light-grey w3-padding-large" type="submit">
-          <i class="fa fa-paper-plane"></i> SEND MESSAGE
+          <i class="fa fa-paper-plane"></i> WYŚLIJ
         </button>
       </p>
-    </form> -->
-  <!-- End Contact Section -->
-  </div>  
-  
-<!-- END PAGE CONTENT -->
+    </form>
+  </div>  -->
+
+  <div class="w3-content w3-container w3-padding-64" id="contact">
+  <h2 class="w3-center">Skontaktuj się ze mną</h3>
+
+  <div class="w3-row w3-padding-32 w3-section" style="margin-right: 0px">
+    <div class="w3-col m6 w3-container">
+      <img src="/media/images/Wroclaw.jpg" class="w3-image w3-round" style="width:100%">
+    </div>
+    <div class="w3-half m6 w3-panel" style="float: right">
+      <div class="w3-large w3-margin-bottom">
+        <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Wrocław, Poland<br>
+        <p><i class="fa fa-instagram" style="font-size:30px; margin-left: 2px; margin-right: 22px; margin-top: 10px"></i>jakiś tam instagram</p>
+        <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Email: zuzia.lenczyk@gmail.com<br>
+      </div>
+
+      <p>Napisz wiadomość</p>
+      <form action="{% url 'contact' %}" target="_self" method="post">
+        {% csrf_token %}
+        <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+          <div class="w3-half">
+            <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
+          </div>
+          <div class="w3-half">
+            <input class="w3-input w3-border" type="email" placeholder="Email" required name="Email">
+          </div>
+        </div>
+        <textarea class="w3-input w3-border" type="text" placeholder="Message" required name="Message"></textarea>
+        <div>
+          <div>
+            <button class="w3-button w3-black w3-right w3-section" type="submit">
+              <i class="fa fa-paper-plane"></i> SEND MESSAGE
+            </button>
+          </div>
+
+          {% if name %}
+            <div class='w3-center'>
+             <h2>Dzięki {{ name }}!</h2>
+             <p>Otrzymałam Twoją wiadomość i wkrótce się z Tobą skontaktuję!:)</p>
+            </div> 
+          {% endif %} 
+
+        </div>
+      </form>
+    </div>
+  </div>
 </div>
+  
+</div>
+
+
 
 </body>
 </html>
