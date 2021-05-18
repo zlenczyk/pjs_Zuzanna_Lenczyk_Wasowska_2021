@@ -4,7 +4,6 @@ from django.urls import reverse
 from datetime import datetime, date
 from ckeditor.fields import RichTextField
 
-
 class Category(models.Model):
 	name = models.CharField(max_length=255)
 
@@ -15,6 +14,20 @@ class Category(models.Model):
 		#return reverse('post-detail', args=(str(self.id)))
 		return reverse('home')
 
+		
+
+class Tag(models.Model):
+	namee = models.CharField(max_length=255)
+
+	def __str__(self):
+		return self.namee
+
+	def get_absolute_url(self):
+		#return reverse('post-detail', args=(str(self.id)))
+		return reverse('home')
+
+
+
 class Post(models.Model):
 	title = models.CharField(max_length=255)
 	header_image = models.ImageField(null = True, blank=True, upload_to="images/" )
@@ -24,6 +37,10 @@ class Post(models.Model):
 	#body = models.TextField()
 	post_date = models.DateField(auto_now_add=True)
 	category = models.CharField(max_length=255, default='brak kategorii' )
+	tag = models.CharField(max_length=255, default='brak tagu')
+
+	class Meta:
+		ordering = ['-id']
 
 
 	def __str__(self):
@@ -32,3 +49,5 @@ class Post(models.Model):
 	def get_absolute_url(self):
 		#return reverse('post-detail', args=(str(self.id)))
 		return reverse('home')
+
+
