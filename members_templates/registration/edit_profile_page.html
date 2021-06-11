@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block title %}Edytowanie profilu{% endblock %}
+
+{% block content %}
+
+
+{% if user.is_authenticated %}
+
+{% if.user.id == profile.user.id %}
+
+<h1>Edytuj profil</h1>
+<br/><br/>
+
+<div class="form-group">
+	<form method="POST" enctype="multipart/form-data">
+		{% csrf_token %}
+		{{ form.as_p }}
+		<button class="btn btn_secondary">Zapisz</button>
+</div>
+
+{% else %}
+
+Przepraszamy, nie jesteś upoważniony do edytowania tej strony.
+
+{% endif %}
+
+{% else %}
+
+Przepraszamy, nie można wyświetlić tej strony.
+
+{% endif %}
+
+{% endblock %}
