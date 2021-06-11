@@ -7,3 +7,10 @@ Aktualizacja 19.05:
 4. poprawiona zakładka kontakt - lepszy wygląd + użytkownik może wypełnić formularz i wysłać maila do prowadzącego bloga
 5. dodana możliwość wyszukiwania posta po nazwie
 6. dodane tagi - na razie nie są grupowe, działają na takiej samej zasadzie jak kategorie
+
+
+Aktualizacja 11.06:
+
+1. Po rejestracji użytkownik musi założyć swój nowy profil (zdjęcie, nicknamie, media społecznościowwe)
+2. Po założeniu profilu użytkownik może wyświetlić swój profil, edytować swój profil, lub edytować ustawienia (ustawienia, to: hasło, nazwa użytkownika, mail, itp.)
+3. tylko admin może dodać nowy post, edytować posty, usuwać posty, itp.
